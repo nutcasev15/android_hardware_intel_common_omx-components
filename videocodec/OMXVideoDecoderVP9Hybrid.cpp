@@ -20,7 +20,6 @@
 #include <wrs_omxil_core/log.h>
 #include "OMXVideoDecoderVP9Hybrid.h"
 
-#include <system/window.h>
 #include <hardware/hardware.h>
 #include <hardware/gralloc.h>
 #include <system/graphics.h>
@@ -356,7 +355,10 @@ OMX_ERRORTYPE OMXVideoDecoderVP9Hybrid::ProcessorProcess(
                 firstFrameSize = 0;
                 return ret;
             }
-	}
+        } else if (!mRet && (mDecodedImageNewWidth == 0 || mDecodedImageNewHeight == 0)) {
+            retains[INPORT_INDEX] = BUFFER_RETAIN_NOT_RETAIN;
+            return OMX_ErrorBadParameter;
+        }
     }
 
 #if LOG_TIME == 1

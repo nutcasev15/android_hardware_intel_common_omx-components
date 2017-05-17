@@ -20,6 +20,9 @@ LOCAL_SHARED_LIBRARIES := \
     libva \
     libva-android
 
+LOCAL_HEADER_LIBRARIES := \
+    libnativebase_headers
+
 LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/wrs_omxil_core \
     $(TARGET_OUT_HEADERS)/khronos/openmax \
@@ -94,6 +97,9 @@ LOCAL_SHARED_LIBRARIES := \
     libva \
     libva-android
 
+LOCAL_HEADER_LIBRARIES := \
+    libnativebase_headers
+
 LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/wrs_omxil_core \
     $(TARGET_OUT_HEADERS)/khronos/openmax \
@@ -144,67 +150,6 @@ include $(BUILD_SHARED_LIBRARY)
 endif
 
 ################################################################################
-
-# VP9 with SW decode and HW Render
-include $(CLEAR_VARS)
-
-ifeq ($(TARGET_HAS_ISV),true)
-LOCAL_CFLAGS += -DTARGET_HAS_ISV
-endif
-
-LOCAL_SHARED_LIBRARIES := \
-    libwrs_omxil_common \
-    libva_videodecoder \
-    liblog \
-    libva \
-    libva-android \
-    libva-tpi
-
-LOCAL_STATIC_LIBRARIES := \
-    libvpx_internal
-
-LOCAL_C_INCLUDES := \
-    $(TARGET_OUT_HEADERS)/wrs_omxil_core \
-    $(TARGET_OUT_HEADERS)/khronos/openmax \
-    $(TARGET_OUT_HEADERS)/libmix_videodecoder \
-    $(TARGET_OUT_HEADERS)/libva \
-    $(LOCAL_PATH)/libvpx_internal/libvpx \
-    $(LOCAL_PATH)/libvpx_internal/libvpx/vpx_codec \
-    $(LOCAL_PATH)/libvpx_internal/libvpx/vpx_ports \
-    $(call include-path-for, frameworks-native)/media/hardware \
-    $(call include-path-for, frameworks-native)/media/openmax \
-    $(call include-path-for, libhardware)
-
-ifeq ($(TARGET_BOARD_PLATFORM),baytrail)
-LOCAL_C_INCLUDES += $(TARGET_OUT_HEADERS)/ufo
-endif
-
-LOCAL_SRC_FILES := \
-    OMXComponentCodecBase.cpp \
-    OMXVideoDecoderBase.cpp \
-    OMXVideoDecoderVP9HWR.cpp
-
-LOCAL_CFLAGS += -Werror
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE := libOMXVideoDecoderVP9HWR
-
-ifeq ($(TARGET_BOARD_PLATFORM),merrifield)
-LOCAL_CFLAGS += -DVED_TILING
-endif
-
-ifeq ($(TARGET_BOARD_PLATFORM),moorefield)
-LOCAL_CFLAGS += -DVED_TILING
-endif
-
-ifeq ($(TARGET_BOARD_PLATFORM),baytrail)
-LOCAL_CFLAGS += -DUSE_GEN_HW
-endif
-
-# TODO: Fix this.
-LOCAL_CFLAGS += -Wno-error=unused-variable
-
-include $(BUILD_SHARED_LIBRARY)
-
 # VP9 hybrid decoder and HW Render
 ifeq ($(TARGET_BOARD_PLATFORM),moorefield)
 include $(CLEAR_VARS)
@@ -216,6 +161,9 @@ LOCAL_SHARED_LIBRARIES := \
     liblog \
     libva_videodecoder \
     libdl \
+
+LOCAL_HEADER_LIBRARIES := \
+    libnativebase_headers
 
 LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/wrs_omxil_core \
@@ -274,6 +222,9 @@ LOCAL_SHARED_LIBRARIES := \
     liblog \
     libva \
     libva-android
+
+LOCAL_HEADER_LIBRARIES := \
+    libnativebase_headers
 
 LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/wrs_omxil_core \
@@ -336,6 +287,9 @@ LOCAL_SHARED_LIBRARIES := \
     libva \
     libva-android
 
+LOCAL_HEADER_LIBRARIES := \
+    libnativebase_headers
+
 LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/wrs_omxil_core \
     $(TARGET_OUT_HEADERS)/khronos/openmax \
@@ -396,6 +350,9 @@ LOCAL_SHARED_LIBRARIES := \
     liblog \
     libva \
     libva-android
+
+LOCAL_HEADER_LIBRARIES := \
+    libnativebase_headers
 
 LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/wrs_omxil_core \
@@ -466,6 +423,9 @@ LOCAL_SHARED_LIBRARIES := \
     libva-android \
     libcutils
 
+LOCAL_HEADER_LIBRARIES := \
+    libnativebase_headers
+
 LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/wrs_omxil_core \
     $(TARGET_OUT_HEADERS)/khronos/openmax \
@@ -520,6 +480,9 @@ LOCAL_SHARED_LIBRARIES := \
     liblog \
     libva \
     libva-android
+
+LOCAL_HEADER_LIBRARIES := \
+    libnativebase_headers
 
 LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/wrs_omxil_core \
@@ -684,6 +647,9 @@ LOCAL_SHARED_LIBRARIES := \
     liblog \
     libva \
     libva-android
+
+LOCAL_HEADER_LIBRARIES := \
+    libnativebase_headers
 
 LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/wrs_omxil_core \
