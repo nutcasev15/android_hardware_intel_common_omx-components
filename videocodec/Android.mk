@@ -69,6 +69,10 @@ ifeq ($(TARGET_BOARD_PLATFORM),baytrail)
 LOCAL_CFLAGS += -DUSE_GEN_HW
 endif
 
+ifeq ($(BOARD_USES_PRE_ION_X86),true)
+   LOCAL_CFLAGS += -DPRE_ION_X86
+endif
+
 # TODO: Fix this.
 LOCAL_CFLAGS += -Wno-error=unused-variable
 
@@ -141,6 +145,10 @@ endif
 
 ifeq ($(TARGET_BOARD_PLATFORM),baytrail)
 LOCAL_CFLAGS += -DUSE_X_TILE
+endif
+
+ifeq ($(BOARD_USES_PRE_ION_X86),true)
+   LOCAL_CFLAGS += -DPRE_ION_X86
 endif
 
 # TODO: Fix this.
@@ -268,6 +276,10 @@ ifeq ($(TARGET_BOARD_PLATFORM),baytrail)
 LOCAL_CFLAGS += -DUSE_GEN_HW
 endif
 
+ifeq ($(BOARD_USES_PRE_ION_X86),true)
+   LOCAL_CFLAGS += -DPRE_ION_X86
+endif
+
 # TODO: Fix this.
 LOCAL_CFLAGS += -Wno-error=unused-variable
 
@@ -330,6 +342,10 @@ endif
 
 ifeq ($(TARGET_BOARD_PLATFORM),baytrail)
 LOCAL_CFLAGS += -DUSE_GEN_HW
+endif
+
+ifeq ($(BOARD_USES_PRE_ION_X86),true)
+   LOCAL_CFLAGS += -DPRE_ION_X86
 endif
 
 # TODO: Fix this.
@@ -399,6 +415,10 @@ ifeq ($(TARGET_BOARD_PLATFORM),baytrail)
 LOCAL_CFLAGS += -DUSE_GEN_HW
 endif
 
+ifeq ($(BOARD_USES_PRE_ION_X86),true)
+   LOCAL_CFLAGS += -DPRE_ION_X86
+endif
+
 # TODO: Fix this.
 LOCAL_CFLAGS += -Wno-error=unused-variable
 
@@ -452,6 +472,10 @@ endif
 LOCAL_CFLAGS += -Werror
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libOMXVideoDecoderAVCSecure
+
+ifeq ($(BOARD_USES_PRE_ION_X86),true)
+   LOCAL_CFLAGS += -DPRE_ION_X86
+endif
 
 # TODO: Fix this.
 LOCAL_CFLAGS += -Wno-error=unused-variable
@@ -509,6 +533,10 @@ LOCAL_CFLAGS += -DVED_TILING
 LOCAL_CFLAGS += -DUSE_META_DATA
 endif
 
+ifeq ($(BOARD_USES_PRE_ION_X86),true)
+   LOCAL_CFLAGS += -DPRE_ION_X86
+endif
+
 # TODO: Fix this.
 LOCAL_CFLAGS += -Wno-error=unused-variable
 
@@ -546,6 +574,10 @@ LOCAL_SRC_FILES := \
     OMXComponentCodecBase.cpp \
     OMXVideoEncoderBase.cpp \
     OMXVideoEncoderAVC.cpp
+
+ifeq ($(BOARD_USES_PRE_ION_X86),true)
+   LOCAL_CFLAGS += -DPRE_ION_X86
+endif
 
 LOCAL_CFLAGS += $(LOCAL_C_FLAGS)
 LOCAL_CFLAGS += -Werror
@@ -590,6 +622,11 @@ LOCAL_CFLAGS += $(LOCAL_C_FLAGS)
 ifeq ($(SW_MPEG4_ENCODER),true)
     LOCAL_CFLAGS += -DSYNC_MODE
 endif
+
+ifeq ($(BOARD_USES_PRE_ION_X86),true)
+   LOCAL_CFLAGS += -DPRE_ION_X86
+endif
+
 LOCAL_CFLAGS += -Werror
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libOMXVideoEncoderH263
@@ -628,6 +665,10 @@ LOCAL_SRC_FILES := \
     OMXVideoEncoderMPEG4.cpp
 
 LOCAL_CFLAGS += $(LOCAL_C_FLAGS)
+
+ifeq ($(BOARD_USES_PRE_ION_X86),true)
+   LOCAL_CFLAGS += -DPRE_ION_X86
+endif
 
 LOCAL_CFLAGS += -Werror
 LOCAL_MODULE_TAGS := optional
@@ -680,6 +721,10 @@ ifeq ($(TARGET_BOARD_PLATFORM),moorefield)
 LOCAL_CFLAGS += -DVED_TILING
 endif
 
+ifeq ($(BOARD_USES_PRE_ION_X86),true)
+   LOCAL_CFLAGS += -DPRE_ION_X86
+endif
+
 # TODO: Fix this.
 LOCAL_CFLAGS += -Wno-error=unused-variable
 
@@ -716,6 +761,10 @@ LOCAL_SRC_FILES := \
     OMXComponentCodecBase.cpp \
     OMXVideoEncoderBase.cpp \
     OMXVideoEncoderVP8.cpp
+
+ifeq ($(BOARD_USES_PRE_ION_X86),true)
+   LOCAL_CFLAGS += -DPRE_ION_X86
+endif
 
 LOCAL_CFLAGS += $(LOCAL_C_FLAGS)
 LOCAL_CFLAGS += -Werror
