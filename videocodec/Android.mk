@@ -26,6 +26,9 @@ LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/libmix_videodecoder \
     $(TARGET_OUT_HEADERS)/libva \
     $(call include-path-for, frameworks-native)/media/hardware \
+    frameworks/native/libs/nativewindow/include \
+    frameworks/native/libs/nativebase/include \
+    frameworks/native/libs/arect/include \
     $(call include-path-for, frameworks-native)/media/openmax \
     $(call include-path-for, libhardware)
 
@@ -104,6 +107,9 @@ LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/libmix_videodecoder \
     $(TARGET_OUT_HEADERS)/libva \
     $(call include-path-for, frameworks-native)/media/hardware \
+    frameworks/native/libs/nativewindow/include \
+    frameworks/native/libs/nativebase/include \
+    frameworks/native/libs/arect/include \
     $(call include-path-for, frameworks-native)/media/openmax \
     $(call include-path-for, libhardware)
 
@@ -170,6 +176,9 @@ LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/libmix_videodecoder \
     $(TARGET_OUT_HEADERS)/libva \
     $(call include-path-for, frameworks-native)/media/hardware \
+    frameworks/native/libs/nativewindow/include \
+    frameworks/native/libs/nativebase/include \
+    frameworks/native/libs/arect/include \
     $(call include-path-for, frameworks-native)/media/openmax \
     $(call include-path-for, libhardware)
 
@@ -228,6 +237,9 @@ LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/libmix_videodecoder \
     $(TARGET_OUT_HEADERS)/libva \
     $(call include-path-for, frameworks-native)/media/hardware \
+    frameworks/native/libs/nativewindow/include \
+    frameworks/native/libs/nativebase/include \
+    frameworks/native/libs/arect/include \
     $(call include-path-for, frameworks-native)/media/openmax \
     $(call include-path-for, libhardware)
 
@@ -293,6 +305,9 @@ LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/libmix_videodecoder \
     $(TARGET_OUT_HEADERS)/libva \
     $(call include-path-for, frameworks-native)/media/hardware \
+    frameworks/native/libs/nativewindow/include \
+    frameworks/native/libs/nativebase/include \
+    frameworks/native/libs/arect/include \
     $(call include-path-for, frameworks-native)/media/openmax \
     $(call include-path-for, libhardware)
 
@@ -358,6 +373,9 @@ LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/libmix_videodecoder \
     $(TARGET_OUT_HEADERS)/libva \
     $(call include-path-for, frameworks-native)/media/hardware \
+    frameworks/native/libs/nativewindow/include \
+    frameworks/native/libs/nativebase/include \
+    frameworks/native/libs/arect/include \
     $(call include-path-for, frameworks-native)/media/openmax \
     $(call include-path-for, libhardware)
 
@@ -432,6 +450,9 @@ LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/libva \
     $(TARGET_OUT_HEADERS)/libdrm \
     $(call include-path-for, frameworks-native)/media/hardware \
+    frameworks/native/libs/nativewindow/include \
+    frameworks/native/libs/nativebase/include \
+    frameworks/native/libs/arect/include \
     $(call include-path-for, frameworks-native)/media/openmax \
     $(call include-path-for, libhardware)
 
@@ -490,6 +511,9 @@ LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/libmix_videodecoder \
     $(TARGET_OUT_HEADERS)/libva \
     $(call include-path-for, frameworks-native)/media/hardware \
+    frameworks/native/libs/nativewindow/include \
+    frameworks/native/libs/nativebase/include \
+    frameworks/native/libs/arect/include \
     $(call include-path-for, frameworks-native)/media/openmax
 
 LOCAL_SRC_FILES := \
@@ -545,6 +569,9 @@ LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/libva \
     $(call include-path-for, frameworks-native)/media/hardware \
     $(call include-path-for, frameworks-native)/media/openmax \
+    frameworks/native/libs/nativewindow/include \
+    frameworks/native/libs/nativebase/include \
+    frameworks/native/libs/arect/include
 
 LOCAL_SRC_FILES := \
     OMXComponentCodecBase.cpp \
@@ -587,6 +614,9 @@ LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/libva \
     $(call include-path-for, frameworks-native)/media/hardware \
     $(call include-path-for, frameworks-native)/media/openmax \
+    frameworks/native/libs/nativewindow/include \
+    frameworks/native/libs/nativebase/include \
+    frameworks/native/libs/arect/include
 
 LOCAL_SRC_FILES := \
     OMXComponentCodecBase.cpp \
@@ -634,6 +664,9 @@ LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/libva \
     $(call include-path-for, frameworks-native)/media/hardware \
     $(call include-path-for, frameworks-native)/media/openmax \
+    frameworks/native/libs/nativewindow/include \
+    frameworks/native/libs/nativebase/include \
+    frameworks/native/libs/arect/include
 
 LOCAL_SRC_FILES := \
     OMXComponentCodecBase.cpp \
@@ -671,6 +704,9 @@ LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/libmix_videodecoder \
     $(TARGET_OUT_HEADERS)/libva \
     $(call include-path-for, frameworks-native)/media/hardware \
+    frameworks/native/libs/nativewindow/include \
+    frameworks/native/libs/nativebase/include \
+    frameworks/native/libs/arect/include \
     $(call include-path-for, frameworks-native)/media/openmax \
     $(call include-path-for, libhardware)
 
@@ -728,6 +764,9 @@ LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/libmix_videoencoder \
     $(TARGET_OUT_HEADERS)/libva \
     $(call include-path-for, frameworks-native)/media/hardware \
+    frameworks/native/libs/nativewindow/include \
+    frameworks/native/libs/nativebase/include \
+    frameworks/native/libs/arect/include \
     $(call include-path-for, frameworks-native)/media/openmax \
 
 LOCAL_SRC_FILES := \
