@@ -27,6 +27,10 @@
 #include "graphics.h"
 #endif
 
+#ifndef PRE_ION_X86
+#define PRE_ION_X86
+#endif
+
 static constexpr const char* VA_VED_RAW_MIME_TYPE = "video/x-raw-vaved";
 static const uint32_t VA_VED_COLOR_FORMAT = 0x20;
 
