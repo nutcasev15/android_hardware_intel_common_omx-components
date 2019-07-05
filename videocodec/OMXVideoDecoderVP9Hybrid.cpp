@@ -15,7 +15,7 @@
 */
 
 #define LOG_TIME 0
-//#define LOG_NDEBUG 0
+#define LOG_NDEBUG 1
 #define LOG_TAG "OMXVideoDecoderVP9Hybrid"
 #include <wrs_omxil_core/log.h>
 #include "OMXVideoDecoderVP9Hybrid.h"

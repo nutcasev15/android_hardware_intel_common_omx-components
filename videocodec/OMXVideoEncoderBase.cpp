@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-
+#define LOG_NDEBUG 1
 #define LOG_TAG "OMXVideoEncoderBase"
 #include "OMXVideoEncoderBase.h"
 #include "IntelMetadataBuffer.h"
