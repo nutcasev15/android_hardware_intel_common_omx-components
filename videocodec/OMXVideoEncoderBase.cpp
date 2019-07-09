@@ -804,6 +804,13 @@ OMX_ERRORTYPE OMXVideoEncoderBase::GetStoreMetaDataInBuffers(OMX_PTR pStructure)
     StoreMetaDataInBuffersParams *p = (StoreMetaDataInBuffersParams *)pStructure;
 
     CHECK_TYPE_HEADER(p);
+    // Check if this is output stream
+    // Metadata is not required for the output stream
+    if (p->nPortIndex == OUTPORT_INDEX) {
+        ret = OMX_ErrorNone;
+        return ret;
+    }
+
     CHECK_PORT_INDEX(p, INPORT_INDEX);
 
     p->bStoreMetaData = mStoreMetaDataInBuffers;
@@ -814,9 +821,17 @@ OMX_ERRORTYPE OMXVideoEncoderBase::SetStoreMetaDataInBuffers(OMX_PTR pStructure)
     OMX_ERRORTYPE ret;
     StoreMetaDataInBuffersParams *p = (StoreMetaDataInBuffersParams *)pStructure;
     VideoParamsStoreMetaDataInBuffers StoreMetaDataInBuffers;
-    PortVideo *port = static_cast<PortVideo *>(this->ports[INPORT_INDEX]);
 
     CHECK_TYPE_HEADER(p);
+    // Check if this is output stream
+    // Metadata is not required for the output stream
+    if (p->nPortIndex == OUTPORT_INDEX) {
+        ret = OMX_ErrorNone;
+        return ret;
+    }
+
+    PortVideo *port = static_cast<PortVideo *>(this->ports[INPORT_INDEX]);
+
     CHECK_PORT_INDEX(p, INPORT_INDEX);
 
     LOGD("SetStoreMetaDataInBuffers (enabled = %x)", p->bStoreMetaData);
