@@ -350,6 +350,15 @@ OMX_ERRORTYPE OMXVideoDecoderBase::ProcessorProcess(
     OMX_ERRORTYPE ret;
     Decode_Status status;
     OMX_BOOL isResolutionChange = OMX_FALSE;
+
+    // Check for Freed Buffer & Deinit Safely
+    if (pBuffers[OUTPORT_INDEX] == NULL) {
+        ProcessorStop();
+        ProcessorDeinit();
+        ret = OMX_ErrorNone;
+        return ret;
+    }
+
     // fill render buffer without draining decoder output queue
     ret = FillRenderBuffer(pBuffers[OUTPORT_INDEX], &retains[OUTPORT_INDEX], 0, &isResolutionChange);
     if (ret == OMX_ErrorNone) {
